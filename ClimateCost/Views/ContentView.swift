@@ -27,11 +27,6 @@ struct ContentView: View {
     }
 }
 
-// MARK: - Preview
-#Preview {
-    ContentView()
-}
-
 // MARK: - Extension
 extension ContentView {
     private var explanation: some View {
@@ -40,10 +35,10 @@ extension ContentView {
                 .font(.body)
             Text("Temperature Increase:")
                 .fontWeight(.bold) +
-            Text(" The expected temperature rise contribution for the region based on current region's emissions.")
+            Text(" The expected temperature rise for the region based on its current emissions for 2050.")
             Text("Cost per Capita:")
                 .fontWeight(.bold) +
-            Text(" The estimated annual cost per person for the region to achieve zero emissions.")
+            Text(" The estimated annual cost per person for the region to achieve zero emissions by 2050.")
         }
         .padding(.vertical, 5)
     }
@@ -67,4 +62,9 @@ extension ContentView {
             .padding(.vertical, 5)
         }
     }
+}
+
+// MARK: - Preview
+#Preview {
+    ContentView()
 }
