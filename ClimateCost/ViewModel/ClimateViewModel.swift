@@ -9,6 +9,7 @@ import Foundation
 
 class ClimateViewModel: ObservableObject {
     @Published var climateData: [ClimateData] = []
+    @Published var sectionHeader = ["Explanation", "Climate Data"]
     
     init() {
         loadClimateData()

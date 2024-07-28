@@ -10,14 +10,13 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - Properties
     @StateObject private var vm = ClimateViewModel()
-    let sectionHeader = ["Explanation", "Climate Data"]
     
     
     // MARK: - Body
     var body: some View {
         NavigationStack {
             List {
-                ForEach(sectionHeader, id: \.self) { title in
+                ForEach(vm.sectionHeader, id: \.self) { title in
                     Section(header: Text(title)) {
                         title == "Explanation" ? AnyView(explanation) : AnyView(climateData)
                     }
