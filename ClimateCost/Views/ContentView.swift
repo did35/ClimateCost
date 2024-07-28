@@ -31,16 +31,15 @@ struct ContentView: View {
 extension ContentView {
     private var explanation: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("This app provides data on the estimated temperature increase and the associated cost per capita for different regions.")
-                .font(.body)
-            Text("Temperature Increase:")
-                .fontWeight(.bold) +
-            Text(" The expected temperature rise for the region based on its current emissions for 2050.")
-            Text("Cost per Capita:")
-                .fontWeight(.bold) +
-            Text(" The estimated annual cost per person for the region to achieve zero emissions by 2050.")
+            ForEach(vm.explanationText, id: \.self) { text in
+                if text == "Temperature Increase:" || text == "Cost per Capita:" {
+                    Text(text)
+                        .fontWeight(.bold)
+                } else {
+                    Text(text)
+                }
+            }
         }
-        .padding(.vertical, 5)
     }
     
     private var climateData: some View {
