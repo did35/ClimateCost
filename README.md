@@ -119,8 +119,11 @@ struct ContentView: View {
 
 ```
 
-
 ## Documentation
 
 [Documentation for Observation](https://developer.apple.com/documentation/observation)
+
+## Screenshots
+<img width="300" src="https://github.com/user-attachments/assets/8a119508-9c4a-4de2-a6a4-2ed7f7ec2b5e">
+
 
